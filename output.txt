@@ -1,0 +1,182 @@
+
+------------------------------------------------------------------------------------------------------------------------
+
+The system will now show you test results of array size:20000
+
+Heap Priority Queue Test using an random generated Array: 
+
+	  1N enqueue test took: 4389466.0 nanoseconds
+	  1N poll test took: 1.0833558E7 nanoseconds
+
+	  2N enqueue test took: 8327260.0 nanoseconds
+	  2N poll test took: 1.1214587E7 nanoseconds
+
+	  4N enqueue test took: 6226518.0 nanoseconds
+	  4N poll test took: 1.5334886E7 nanoseconds
+
+Array Priority Queue Test using Binary Search insertion using a random generated Array: 
+
+	  1N enqueue test took: 2.0240167E7 nanoseconds
+	  1N poll test took: 1464215.0 nanoseconds
+
+	  2N enqueue test took: 4.0797789E7 nanoseconds
+	  2N poll test took: 369905.0 nanoseconds
+
+	  4N enqueue test took: 1.4939646E8 nanoseconds
+	  4N poll test took: 83120.0 nanoseconds
+
+	Poll demonstrates O(1) behavior while Enqueue demonstrates the average O(nlog(n)) behavior
+
+Unordered Priority Queue test using Linear Search insertion using a random generated Array: 
+
+	  1N enqueue test took: 2688128.0 nanoseconds
+	  1N poll test took: 7.78869609E8 nanoseconds
+
+	  2N enqueue test took: 2053558.0 nanoseconds
+	  2N poll test took: 3.069924993E9 nanoseconds
+
+	  4N enqueue test took: 4101025.0 nanoseconds
+	  4N poll test took: 1.2758217884E10 nanoseconds
+
+	Poll demonstrates O(n^2) behavior while Enqueue demonstrates O(1) behavior
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+The system will now demonstrate the worst cases for Array and Unordered Priority Queues
+
+Heap Priority Queue with sequential list of Low to High case
+
+	  1N enqueue test took: 940834.0 nanoseconds
+	  1N poll test took: 1552958.0 nanoseconds
+
+	  2N enqueue test took: 1460272.0 nanoseconds
+	  2N poll test took: 3502838.0 nanoseconds
+
+	  4N enqueue test took: 2494071.0 nanoseconds
+	  4N poll test took: 7378441.0 nanoseconds
+
+Array Priority Queue with sequential list of Low to High case
+
+	  1N enqueue test took: 2343678.0 nanoseconds
+	  1N poll test took: 20730.0 nanoseconds
+
+	  2N enqueue test took: 3301174.0 nanoseconds
+	  2N poll test took: 40868.0 nanoseconds
+
+	  4N enqueue test took: 7059274.0 nanoseconds
+	  4N poll test took: 82129.0 nanoseconds
+
+Unordered Priority Queue with sequential list of Low to High case
+
+	  1N enqueue test took: 552040.0 nanoseconds
+	  1N poll test took: 7.41082336E8 nanoseconds
+
+	  2N enqueue test took: 1379959.0 nanoseconds
+	  2N poll test took: 3.069535037E9 nanoseconds
+
+	  4N enqueue test took: 1675645.0 nanoseconds
+	  4N poll test took: 1.1879777591E10 nanoseconds
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+Heap Priority Queue with sequential list of High to Low case
+
+	  1N enqueue test took: 3375216.0 nanoseconds
+	  1N poll test took: 234227.0 nanoseconds
+
+	  2N enqueue test took: 786209.0 nanoseconds
+	  2N poll test took: 257194.0 nanoseconds
+
+	  4N enqueue test took: 1435059.0 nanoseconds
+	  4N poll test took: 923914.0 nanoseconds
+
+Array Priority Queue with sequential list of High to Low case
+
+	  1N enqueue test took: 1.068222E7 nanoseconds
+	  1N poll test took: 119480.0 nanoseconds
+
+	  2N enqueue test took: 3.0515535E7 nanoseconds
+	  2N poll test took: 349673.0 nanoseconds
+
+	  4N enqueue test took: 1.28405785E8 nanoseconds
+	  4N poll test took: 97821.0 nanoseconds
+
+Unordered Priority with sequential list of High to Low case
+
+	  1N enqueue test took: 120698.0 nanoseconds
+	  1N poll test took: 7.43684282E8 nanoseconds
+
+	  2N enqueue test took: 283329.0 nanoseconds
+	  2N poll test took: 2.997862951E9 nanoseconds
+
+	  4N enqueue test took: 843327.0 nanoseconds
+	  4N poll test took: 1.2009626941E10 nanoseconds
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+Heap Priority Queue Worst Case : RANDOM GENERATED ARRAY
+	 The heap priority queue works worst with an unsorted an array due to sorting the enqueue
+	 The best case would be enqueuing in sequential order such as increasing or decreasing as it requires little work from the algorithm 
+
+Array Priority Queue Worst Case : SORTED ARRAY FROM HIGH TO LOW (ex. 4,3,2,1...) Complexity : O(nlog(n)
+	 The array priority queue works worst with an array from high to low because after finding
+	 where to insert the array, (O(log(n)) behavior), the array has to shift all the contents to the right
+	 creating O(n) behavior. This makes the algorithm have O(nlog(n)) behavior
+
+Unordered Priority Queue Worst Case : SORTED ARRAY FROM LOW TO HIGH (ex. 1,2,3,4... )  Complexity: O(n^2)
+	 The unordered priority queue works worst with an array from low to high because finding
+	 after finding the index for removal (O(n)) behavior), the array has to shift all the contents to the left
+	 creating O(n) behavior. This makes the algorithm have O(n^2) behavior
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+System will try to peek into a newly instantiated HeapPriQueue,ArrayPriQueue,UnorderedPriQueue in this order
+	Heap Priority Peek Test: null
+	Array Priority Peek Test: null
+	Unordered Priority Peek Test: null
+
+System will try to test the isEmpty() of a newly instantiated HeapPriQueue,ArrayPriQueue,UnorderedPriQueue in this order
+	 Heap Priority isEmpty Test: true
+	 Array Priority isEmpty Test: true
+	 Unordered Priority isEmpty Test: true
+
+System will try to show the size of a newly instantiated HeapPriQueue,ArrayPriQueue,UnorderedPriQueue in this order
+	Heap Priority size Test: 0
+	Array Priority size Test: 0
+	Unordered Priority size Test: 0
+
+System will now instantiated all Queues with an array of length 5
+	The array will contain {-2,-3,5,1,5} for testing purposes
+
+System will try to peek into a instantiated HeapPriQueue,ArrayPriQueue,UnorderedPriQueue in this order
+These sort from highest being at the bottom of the queue and lowest being at the top
+	 Heap Priority Peek Test: -3
+	 Array Priority Peek Test: 5
+	 Unordered Priority Peek Test: 5
+
+System will try to show the size of an instantiated HeapPriQueue,ArrayPriQueue,UnorderedPriQueue in this order
+	 Heap Priority size Test: 5
+	 Array Priority size Test: 5
+	 Unordered Priority size Test: 5
+
+System will try to test the isEmpty() of an instantiated HeapPriQueue,ArrayPriQueue,UnorderedPriQueue in this order
+	 Heap Priority isEmpty Test: false
+	 Array Priority isEmpty Test: false
+	 Unordered Priority isEmpty Test: false
+
+System will try to test the contents of a HeapPriQueue,ArrayPriQueue,UnorderedPriQueue in this order
+	 Heap Priority content Test: -3,-2,5,1,5,
+	 Array Priority content Test: -3,-2,1,5,5,
+	 Unordered Priority content Test: -2,-3,5,1,5,
+
+System will try to test the poll() of a HeapPriQueue,ArrayPriQueue,UnorderedPriQueue in this order
+	 Heap Priority poll Test: -3,-2,1,5,5,
+	 Array Priority poll Test: 5,5,1,-2,-3,
+	 Unordered Priority poll Test: 5,5,1,-2,-3,
+------------------------------------------------------------------------------------------------------------------------
+
